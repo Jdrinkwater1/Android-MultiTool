@@ -7,9 +7,9 @@
    <ImageView
        android:layout_width="match_parent"
        android:layout_height="120dp"
-       android:layout_margin="16dp"
-       android:onClick="ClickLogo"
-       android:src=""/>
+       android:layout_margin="20dp"
+       android:src="@drawable/ic_baseline_carpenter_24"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,7 +19,7 @@
         android:textAlignment="center"
         android:textColor="@color/blue"/>
 
-    <view
+    <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="16dp"
@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:onClick="ClickCompass">
+        android:onClick="clickCompass">
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
