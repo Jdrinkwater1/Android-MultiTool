@@ -83,7 +83,9 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="48dp"
             android:src="@drawable/ic_compass"/>
+
     </LinearLayout>
+
 
 
 
