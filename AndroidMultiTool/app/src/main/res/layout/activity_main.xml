@@ -21,30 +21,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-
-            <ImageView
-                android:id="@+id/compass"
-                android:layout_width="312dp"
-                android:layout_height="556dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.494"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                app:layout_constraintVertical_bias="0.26"
-                app:srcCompat="@drawable/ic_compass2" />
-
             <TextView
-                android:id="@+id/degrees"
+                android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="0"
-                android:textSize="30sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
+                android:text="Bubble Level"
+                tools:layout_editor_absoluteX="168dp"
+                tools:layout_editor_absoluteY="173dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 

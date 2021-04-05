@@ -15,13 +15,36 @@
         <include
             layout="@layout/main_toolbar"/>
 
-        <TextView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Compass"
-            android:textSize="50sp"
-            android:textStyle="bold"
-            android:gravity="center"/>
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/compass"
+                android:layout_width="312dp"
+                android:layout_height="556dp"
+                android:layout_marginBottom="36dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/degrees"
+                app:layout_constraintVertical_bias="0.26"
+                app:srcCompat="@drawable/ic_compass2" />
+
+            <TextView
+                android:id="@+id/degrees"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="0"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </LinearLayout>
