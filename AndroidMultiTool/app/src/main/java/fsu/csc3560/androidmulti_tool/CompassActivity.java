@@ -38,6 +38,7 @@ public class CompassActivity extends AppCompatActivity implements SensorEventLis
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         compassImage = (ImageView) findViewById(R.id.compass);
         degrees = (TextView) findViewById(R.id.degrees);
+
         start();
     }
 

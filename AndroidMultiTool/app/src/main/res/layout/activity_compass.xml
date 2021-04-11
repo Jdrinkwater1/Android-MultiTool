@@ -31,7 +31,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/degrees"
                 app:layout_constraintVertical_bias="0.26"
-                app:srcCompat="@drawable/ic_compass2" />
+                app:srcCompat="@drawable/ic_compassbackground" />
 
             <TextView
                 android:id="@+id/degrees"
@@ -43,6 +43,18 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="312dp"
+                android:layout_height="526dp"
+                app:layout_constraintBottom_toBottomOf="@id/compass"
+                app:layout_constraintEnd_toEndOf="@id/compass"
+                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintStart_toStartOf="@id/compass"
+                app:layout_constraintTop_toTopOf="@id/compass"
+                app:layout_constraintVertical_bias="0.583"
+                app:srcCompat="@drawable/ic_compassneedle" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
