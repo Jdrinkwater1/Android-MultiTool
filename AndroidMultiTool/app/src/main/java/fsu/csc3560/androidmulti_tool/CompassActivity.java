@@ -75,10 +75,6 @@ public class CompassActivity extends AppCompatActivity implements SensorEventLis
         MainActivity.switchActivity(this,MainActivity.class);
     }
 
-    public void ClickGforce(View view)
-    {
-        MainActivity.switchActivity(this,GForceActivity.class);
-    }
     public void clickCompass(View view)
     {
         recreate();
@@ -133,25 +129,7 @@ public class CompassActivity extends AppCompatActivity implements SensorEventLis
         direction = Math.round(direction);
         compassImage.setRotation(-direction);
 
-        String where = "NO";
-        if(direction >= 350 || direction<=10)
-            where = "N";
-        if(direction < 350 || direction>280)
-            where = "NW";
-        if(direction <= 280 || direction>260)
-            where = "W";
-        if(direction <= 260 || direction>190)
-            where = "SW";
-        if(direction <= 190 || direction>170)
-            where = "S";
-        if(direction <= 170 || direction>100)
-            where = "SE";
-        if(direction <= 100 || direction>80)
-            where = "E";
-        if(direction <= 80|| direction>10)
-            where = "NE";
-
-        degrees.setText(direction+"°"+where);
+        degrees.setText(direction+"°");
 
     }
     @Override

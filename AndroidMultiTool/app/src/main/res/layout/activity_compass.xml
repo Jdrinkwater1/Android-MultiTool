@@ -20,6 +20,17 @@
             android:layout_height="match_parent">
 
 
+            <TextView
+                android:id="@+id/degrees"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="72dp"
+                android:text="0"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <ImageView
                 android:id="@+id/compass"
                 android:layout_width="312dp"
@@ -30,19 +41,8 @@
                 app:layout_constraintHorizontal_bias="0.494"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/degrees"
-                app:layout_constraintVertical_bias="0.26"
+                app:layout_constraintVertical_bias="1.0"
                 app:srcCompat="@drawable/ic_compassbackground" />
-
-            <TextView
-                android:id="@+id/degrees"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="0"
-                android:textSize="30sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/imageView"
@@ -50,11 +50,23 @@
                 android:layout_height="526dp"
                 app:layout_constraintBottom_toBottomOf="@id/compass"
                 app:layout_constraintEnd_toEndOf="@id/compass"
-                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@id/compass"
-                app:layout_constraintTop_toTopOf="@id/compass"
-                app:layout_constraintVertical_bias="0.583"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
                 app:srcCompat="@drawable/ic_compassneedle" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Compass"
+                android:textSize="36sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.025" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -69,6 +81,7 @@
         android:background="@color/white">
         <include
             layout="@layout/main_nav_drawer"/>
+
     </RelativeLayout>
 
 

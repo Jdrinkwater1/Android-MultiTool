@@ -90,11 +90,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     }
 
 
-    public void ClickGforce(View view)
-    {
-        switchActivity(this,GForceActivity.class);
-    }
-
     public void noSensorWarning()
     {
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
@@ -140,14 +135,37 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             pitchOrient = Math.round(pitchOrient);
             rollOrient = Math.toDegrees(orientationArr[2]);
             rollOrient = Math.round(rollOrient);
-            animation1 = ObjectAnimator.ofFloat(level,"translationX", (float) rollOrient*3);
+            if(rollOrient > 62)
+            {
+                animation1 = ObjectAnimator.ofFloat(level,"translationX", (float) 186);
+            }
+            else if(rollOrient < -68 )
+            {
+                animation1 = ObjectAnimator.ofFloat(level,"translationX", (float) -210);
+            }
+            else
+                {
+                animation1 = ObjectAnimator.ofFloat(level, "translationX", (float) rollOrient * 3);
+            }
             animation1.setDuration(0);
             animation1.start();
-            animation2 = ObjectAnimator.ofFloat(pitchBubble,"translationY", (float) pitchOrient*3);
+            if(pitchOrient <= -69)
+            {
+                animation2 = ObjectAnimator.ofFloat(pitchBubble,"translationY", (float) -207);
+            }
+            else if(pitchOrient>=77)
+            {
+                animation2 = ObjectAnimator.ofFloat(pitchBubble,"translationY", (float) 231);
+            }
+            else
+            {
+                animation2 = ObjectAnimator.ofFloat(pitchBubble,"translationY", (float) pitchOrient*3);
+            }
+
             animation2.setDuration(0);
             animation2.start();
-            pitchDegrees.setText(pitchOrient+"");
-            rollDegrees.setText(rollOrient+"");
+            pitchDegrees.setText("Pitch:"+pitchOrient+"°");
+            rollDegrees.setText("Roll:"+rollOrient+"°");
         }
     }
     public void stop()
