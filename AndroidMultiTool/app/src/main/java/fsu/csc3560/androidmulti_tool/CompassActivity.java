@@ -14,6 +14,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import static fsu.csc3560.androidmulti_tool.MainActivity.switchActivity;
+
 public class CompassActivity extends AppCompatActivity implements SensorEventListener {
     DrawerLayout drawerLayout;
     private SensorManager sensorManager;
@@ -72,7 +74,7 @@ public class CompassActivity extends AppCompatActivity implements SensorEventLis
     public void ClickBubble(View view)
     {
         //redirect to home
-        MainActivity.switchActivity(this,MainActivity.class);
+        switchActivity(this,MainActivity.class);
     }
 
     public void clickCompass(View view)
@@ -85,6 +87,10 @@ public class CompassActivity extends AppCompatActivity implements SensorEventLis
         alert.setMessage("Your Device does not support this.");
         alert.setCancelable(false);
         alert.setNegativeButton("Close",null);
+    }
+    public void clickStop(View view)
+    {
+        switchActivity(this,CompassActivity.class);
     }
 
     public void stop()

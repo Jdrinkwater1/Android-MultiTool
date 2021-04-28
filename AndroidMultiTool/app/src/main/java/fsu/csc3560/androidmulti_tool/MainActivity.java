@@ -88,7 +88,10 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     {
         switchActivity(this,CompassActivity.class);
     }
-
+    public void clickStop(View view)
+    {
+        switchActivity(this,activity_stopwatch.class);
+    }
 
     public void noSensorWarning()
     {
