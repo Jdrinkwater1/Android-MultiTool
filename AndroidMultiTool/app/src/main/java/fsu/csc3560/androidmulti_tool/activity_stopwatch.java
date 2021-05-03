@@ -22,7 +22,7 @@ public class activity_stopwatch extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_stopwatch);
         chronometer = findViewById(R.id.chronometer);
         drawerLayout = findViewById(R.id.drawer_layout);
         chronometer.setBase(SystemClock.elapsedRealtime());
@@ -63,10 +63,19 @@ public class activity_stopwatch extends AppCompatActivity {
         //redirect to home
         switchActivity(this,MainActivity.class);
     }
+    public void clickCompass(View view)
+    {
+        switchActivity(this,CompassActivity.class);
+    }
+    public void clickFlash(View view)
+    {
+        switchActivity(this,activity_flashlight.class);
+    }
     public void clickStop(View view)
     {
         recreate();
     }
+
     protected void onPause()
     {
         super.onPause();

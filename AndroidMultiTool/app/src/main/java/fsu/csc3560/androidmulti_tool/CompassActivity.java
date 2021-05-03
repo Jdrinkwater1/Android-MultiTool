@@ -88,9 +88,13 @@ public class CompassActivity extends AppCompatActivity implements SensorEventLis
         alert.setCancelable(false);
         alert.setNegativeButton("Close",null);
     }
+    public void clickFlash(View view)
+    {
+        switchActivity(this,activity_flashlight.class);
+    }
     public void clickStop(View view)
     {
-        switchActivity(this,CompassActivity.class);
+        switchActivity(this,activity_stopwatch.class);
     }
 
     public void stop()

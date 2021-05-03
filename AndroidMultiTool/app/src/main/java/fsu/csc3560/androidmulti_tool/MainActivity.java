@@ -92,7 +92,10 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     {
         switchActivity(this,activity_stopwatch.class);
     }
-
+    public void clickFlash(View view)
+    {
+        switchActivity(this,activity_flashlight.class);
+    }
     public void noSensorWarning()
     {
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
