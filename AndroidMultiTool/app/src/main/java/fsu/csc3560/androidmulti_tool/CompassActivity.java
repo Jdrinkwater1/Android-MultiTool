@@ -43,11 +43,12 @@ public class CompassActivity extends AppCompatActivity implements SensorEventLis
 
         start();
     }
-
+    //startup the sensors needed and check the sensors that we're going to use
     private void start()
     {
         if (sensorManager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR)==null)
         {
+            //if the user doesnt have this sensor throw the dialogue box warning
             if (sensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD)==null || sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)==null)
             {
                 noSensorWarning();
@@ -96,7 +97,7 @@ public class CompassActivity extends AppCompatActivity implements SensorEventLis
     {
         switchActivity(this,activity_stopwatch.class);
     }
-
+    //stop the sensors
     public void stop()
     {
         if(haveSensor && haveSensor2)
@@ -112,6 +113,7 @@ public class CompassActivity extends AppCompatActivity implements SensorEventLis
             }
         }
     }
+    //everytime the sensors data changes run this, if the either sensor changes it will calculate the degrees using either the rotation vector accelerometer, or the magnetic field and accelerometer
     public void onSensorChanged(SensorEvent event)
     {
         if(event.sensor.getType() == Sensor.TYPE_ROTATION_VECTOR)
@@ -147,7 +149,7 @@ public class CompassActivity extends AppCompatActivity implements SensorEventLis
 
     }
 
-
+    //on pause stop the sensors
     @Override
     protected void onPause()
     {

@@ -19,7 +19,13 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+/*
+    Jacob Drinkwater & Eric Fairbrother worked on this project
+    3/8/21
+    This program is a multitool that utilizes the androids sensors and apis to display
+    meaningful information.
 
+ */
 public class MainActivity extends AppCompatActivity implements SensorEventListener {
     private SensorManager sensorManager;
     private Sensor sensor;
@@ -84,18 +90,23 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         recreate();
     }
 
+    //switch the activity to the compass
     public void clickCompass(View view)
     {
         switchActivity(this,CompassActivity.class);
     }
+    //switch the activity to the stopwatch
     public void clickStop(View view)
     {
         switchActivity(this,activity_stopwatch.class);
     }
+    //switch the activity to the flash light
     public void clickFlash(View view)
     {
         switchActivity(this,activity_flashlight.class);
     }
+
+    //displays a dialogue box and inform the user the dont have that sensor.
     public void noSensorWarning()
     {
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
@@ -130,6 +141,10 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         start();
     }
 
+    /*
+     Each time the sensor changes calculate the degrees using the rotation vector
+     and then convert that into a matrix. Then get the orientation from that.
+     */
     @Override
     public void onSensorChanged(SensorEvent event)
     {
@@ -182,7 +197,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         }
     }
 
-
+    //has to be implemented
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
 

@@ -45,7 +45,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:rotation="90"
-                    app:srcCompat="@drawable/ic_baseline_flashlight_on_64" />
+                    app:srcCompat="@drawable/ic_baseline_flashlight_off_64" />
 
                 <ToggleButton
                     android:id="@+id/toggle_flashlight"
